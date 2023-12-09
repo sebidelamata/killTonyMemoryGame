@@ -66,3 +66,19 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.card{
+  width: 12em;
+  height: 17em;
+  border-radius: 2em;
+  object-fit: cover;
+}
+
+.card-board{
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
+  width: 100vw;
+  gap: min(2em);
+  list-style: none;
+}
