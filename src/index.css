@@ -90,13 +90,6 @@ button:focus-visible {
   align-items: center;
 }
 
-.card{
-  width: 12em;
-  height: 17em;
-  border-radius: 2em;
-  object-fit: cover;
-}
-
 .card-board{
   display: flex;
   flex-wrap: wrap;
@@ -106,4 +99,49 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
   padding: 0;
+}
+
+.card{
+  width: 12em;
+  height: 17em;
+  border-radius: 2em;
+  object-fit: cover;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  box-shadow: 0 0 0.45em 0 white;
+}
+.card-container{
+  position: relative;
+  border-radius: 2em;
+}
+.card-container::before{
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transform: perspective(1em) rotateX(40deg) translateZ(-0.5em) scale(1, 0.075);
+  filter: blur(1.75em);
+  opacity: 0.3;
+}
+
+.card-container::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 1.25em 0.45em white;
+  opacity: 0; 
+  border-radius: 2em;
+}
+
+.card-container:hover::after,
+.card-container:focus::after{
+  opacity: 1;
 }

@@ -95,7 +95,7 @@ const Card = ({game, setGame}) => {
   )
 
     return (
-        <div>
+        <div className='card-container'>
             <img 
               className={`card ${imageName}`} 
               src={imageURL} 
