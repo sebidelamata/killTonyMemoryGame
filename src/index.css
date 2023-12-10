@@ -98,9 +98,8 @@ button:focus-visible {
 }
 
 .card-board{
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: repeat(4, auto);
+  display: flex;
+  flex-wrap: wrap;
   width: 100vw;
   gap: min(4em);
   list-style: none;

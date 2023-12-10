@@ -49,7 +49,7 @@ const Card = ({game, setGame}) => {
     setSelectedURLIndex(
       Math.floor(Math.random() * urlArray.length)
     ),
-    []
+    [game]
   )
 
   useEffect(() => {
