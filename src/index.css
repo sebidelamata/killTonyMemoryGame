@@ -102,6 +102,9 @@ button:focus-visible {
   grid-template-rows: repeat(3, auto);
   grid-template-columns: repeat(4, auto);
   width: 100vw;
-  gap: min(2em);
+  gap: min(4em);
   list-style: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 }

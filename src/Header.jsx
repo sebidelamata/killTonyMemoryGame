@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const Header = () => {
+const Header = ({game, setGame}) => {
     return (
         <section className='header'>
             <div id='header-left'></div>
