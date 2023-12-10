@@ -7,6 +7,8 @@ const Card = ({game, setGame}) => {
   const [imageURL, setImageURL] = useState()
   const [imageName, setImageName] = useState()
 
+  console.log(game)
+
   const urlList = {
     hinchcliffe: 'https://i.imgur.com/qdBr2FJm.jpg', /* hinchcliffe */
     redban: 'https://i.imgur.com/y0dA3t4m.jpg', /* redban */
@@ -30,7 +32,19 @@ const Card = ({game, setGame}) => {
   }
 
   const urlArray = Object.values(urlList)
- 
+
+  const handleCardClick = (e) => {
+    let comic = e.target.classList[1]
+    let updatedGame = {...game}
+    updatedGame.cardsPicked[comic] += 1
+    updatedGame.score += 1
+    if(updatedGame.highScore < updatedGame.score){
+      updatedGame.highScore += 1
+    }
+    setGame(updatedGame)
+  }
+
+  // randomly select url index on dom render
   useEffect (() => 
     setSelectedURLIndex(
       Math.floor(Math.random() * urlArray.length)
@@ -82,7 +96,13 @@ const Card = ({game, setGame}) => {
 
     return (
         <div>
-            <img className={`card ${imageName}`} src={imageURL} alt="" loading="lazy"/>
+            <img 
+              className={`card ${imageName}`} 
+              src={imageURL} 
+              alt={imageName} 
+              loading="lazy"
+              onClick={(e) => handleCardClick(e)}
+            />
         </div>
     )
 }

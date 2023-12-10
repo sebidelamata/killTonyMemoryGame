@@ -32,8 +32,8 @@ function App() {
 
   return (
     <>
-      <Header game={game} seGame={setGame}/>
-      <CardBoard game={game} seGame={setGame}/>
+      <Header game={game} setGame={setGame}/>
+      <CardBoard game={game} setGame={setGame}/>
     </>
   )
 }

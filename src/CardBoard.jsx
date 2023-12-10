@@ -6,7 +6,7 @@ const CardBoard = ({game, setGame}) => {
         <ul className='card-board'>
             {
             Array.from({length: 12}, (_, i) => (
-                <li key={i}><Card game={game} seGame={setGame}/></li>
+                <li key={i}><Card game={game} setGame={setGame}/></li>
             ))
             }
         </ul>
