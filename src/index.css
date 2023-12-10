@@ -131,6 +131,7 @@ button:focus-visible {
 
 .card-container::after{
   content: "";
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
