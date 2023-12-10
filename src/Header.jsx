@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 
 const Header = ({game, setGame}) => {
+
     return (
         <section className='header'>
             <div id='header-left'></div>
             <div id='header-center'>
+                <div id='title'><strong>Kill Tony Memory Game</strong></div>
                 <img id='header-logo' src="./kill_tony_logo.jpeg" alt="Kill Tony Logo" />
             </div>
             <div id='header-right'>

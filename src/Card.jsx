@@ -7,8 +7,6 @@ const Card = ({game, setGame}) => {
   const [imageURL, setImageURL] = useState()
   const [imageName, setImageName] = useState()
 
-  console.log(game)
-
   const urlList = {
     hinchcliffe: 'https://i.imgur.com/qdBr2FJm.jpg', /* hinchcliffe */
     redban: 'https://i.imgur.com/y0dA3t4m.jpg', /* redban */

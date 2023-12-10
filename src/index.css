@@ -73,6 +73,7 @@ button:focus-visible {
   display: grid;
   grid-template-columns: 20% 60% 20%;
   width: 100vw;
+  height: 15svh;
 }
 
 #header-center{
@@ -151,4 +152,33 @@ button:focus-visible {
 .card-container:hover::after,
 .card-container:focus::after{
   opacity: 1;
+}
+
+#you-suck,
+#winner{
+  position: absolute;
+  width: 100vw;
+  height: 85svh;
+  object-fit: fill;
+  top: 15%;
+  left: 0%;
+}
+
+#you-lose,
+#you-win{
+  position: absolute;
+  width: 20vw;
+  height: 10svh;
+  top: 70%;
+  left: 40%;
+}
+
+#title,
+#score,
+#high-score{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
 }
