@@ -125,7 +125,7 @@ button:focus-visible {
   height: 100%;
   background: white;
   transform: perspective(1em) rotateX(40deg) translateZ(-0.5em) scale(1, 0.075);
-  filter: blur(1.75em);
+  filter: blur(2em);
   opacity: 0.3;
 }
 
@@ -140,6 +140,12 @@ button:focus-visible {
   box-shadow: 0 0 1.25em 0.45em white;
   opacity: 0; 
   border-radius: 2em;
+  transition: opacity linear 300ms;
+}
+
+.card-container:hover::before,
+.card-container:focus::before{
+  opacity: 0.5;
 }
 
 .card-container:hover::after,
